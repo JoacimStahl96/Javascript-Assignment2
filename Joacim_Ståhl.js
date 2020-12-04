@@ -1,6 +1,7 @@
 "use strict";
 //user can only login with these names.
 let usernames = ["yazeen", "ec", "softhouse"];
+// global variables
 let myInput = document.createElement("input");
 myInput.required = true;
 let newForm = document.createElement("form");
