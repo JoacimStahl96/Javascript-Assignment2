@@ -50,12 +50,13 @@ function initButton() {
   //if validateLoginInfo is true alert user with "Welcome" text.
   //if validateLoginInfo is false add border style to the input element: "3px solid red". (TIP: use .style.border).
 
-  myBtn.addEventListener("click", function () {
+  myBtn.addEventListener("click", function (e) {
     if (validateLoginInfo()) {
       alert("Welcome");
-    } else if (validateLoginInfo() == false) {
+    } else { 
       myInput.style.border = "3px solid red";
     }
+    
   });
 }
 
