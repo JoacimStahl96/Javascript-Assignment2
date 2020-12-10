@@ -1,10 +1,11 @@
 "use strict";
 //user can only login with these names.
 let usernames = ["yazeen", "ec", "softhouse"];
+
 // global variables
 let myInput = document.createElement("input");
-myInput.required = true;
 let newForm = document.createElement("form");
+
 //Function that calls all other functions in order
 //--Don't modify--
 function init() {
@@ -34,13 +35,13 @@ function initInput() {
   //Add code here to:
   //create input element and set it to be requried (TIP: use .required = true).
   //Add it to the form element. (TIP: use .appendChild).
-  // myInput.required;
+  myInput.required = true;
   newForm.appendChild(myInput);
 }
 
 function initButton() {
   //create button element and set the text to "login" (TIP: use .textContent)
-  ////Add it to the form element. (TIP: use .appendChild).
+  //Add it to the form element. (TIP: use .appendChild).
 
   let myBtn = document.createElement("button");
   myBtn.textContent = "Login";
@@ -51,12 +52,12 @@ function initButton() {
   //if validateLoginInfo is false add border style to the input element: "3px solid red". (TIP: use .style.border).
 
   myBtn.addEventListener("click", function (e) {
+    // returns true
     if (validateLoginInfo()) {
       alert("Welcome");
-    } else { 
+    } else {
       myInput.style.border = "3px solid red";
     }
-    
   });
 }
 
@@ -75,6 +76,6 @@ function validateLoginInfo() {
 
 //Write code here to call the init function only after the dom has been loaded (TIP: check "DOMContentLoaded" event)
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener("DOMContentLoaded", function () {
   init();
-  });
+});
